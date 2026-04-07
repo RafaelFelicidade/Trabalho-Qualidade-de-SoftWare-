@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html lang="br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Moído — Loja de Pó de Café</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <h1>Welcome to the Index Page</h1>
-    <p>This is a basic structure of an HTML5 document.</p>
+  <header>
+    <div class="logo">Café <span>Moído</span></div>
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Carrinho <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <h1>Café Moído</h1>
+    <p>Os melhores grãos, torrados com paixão e entregues na sua porta.</p>
+  </section>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Buscar café..." />
+    <select id="categoryFilter">
+      <option value="todos">Todas as categorias</option>
+      <option value="tradicional">Tradicional</option>
+      <option value="gourmet">Gourmet</option>
+      <option value="especial">Especial</option>
+    </select>
+    <select id="sortFilter">
+      <option value="">Ordenar por</option>
+      <option value="price-asc">Menor preço</option>
+      <option value="price-desc">Maior preço</option>
+      <option value="name-asc">Nome A-Z</option>
+    </select>
+  </div>
+
+  <div class="products-grid" id="productsGrid"></div>
+
+  <!-- Modal do Carrinho -->
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal">
+      <h2>Seu Carrinho <button class="close-btn" onclick="closeCart()">✕</button></h2>
+      <div id="cartContent"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Café Moído © 2026 — Atividade de Qualidade de Software com CI/CD</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/validators.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
