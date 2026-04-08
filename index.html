@@ -3,55 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Café Moído — Loja de Pó de Café</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Café Especial — Faça seu Pedido</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">Café <span>Moído</span></div>
-    <button class="cart-btn" onclick="openCart()">
-      🛒 Carrinho <span class="cart-count" id="cartCount">0</span>
-    </button>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="emoji-cafe">☕</span>
+      <h1>Café Especial</h1>
+      <p>Escolha sua embalagem e faça seu pedido pelo WhatsApp</p>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Café Moído</h1>
-    <p>Os melhores grãos, torrados com paixão e entregues na sua porta.</p>
-  </section>
+  <main class="container">
 
-  <div class="controls">
-    <input type="text" id="searchInput" placeholder="Buscar café..." />
-    <select id="categoryFilter">
-      <option value="todos">Todas as categorias</option>
-      <option value="tradicional">Tradicional</option>
-      <option value="gourmet">Gourmet</option>
-      <option value="especial">Especial</option>
-    </select>
-    <select id="sortFilter">
-      <option value="">Ordenar por</option>
-      <option value="price-asc">Menor preço</option>
-      <option value="price-desc">Maior preço</option>
-      <option value="name-asc">Nome A-Z</option>
-    </select>
-  </div>
+    <!-- PRODUTOS -->
+    <section class="secao">
+      <h2>🛍️ Nossos Produtos</h2>
+      <div class="grade-produtos" id="gradeProdutos"></div>
+    </section>
 
-  <div class="products-grid" id="productsGrid"></div>
+    <!-- CARRINHO -->
+    <section class="secao" id="secaoCarrinho" style="display:none;">
+      <h2>🛒 Seu Carrinho</h2>
+      <ul id="listaCarrinho"></ul>
+      <div class="total-box">
+        <span>Total:</span>
+        <strong id="totalCarrinho">R$ 0,00</strong>
+      </div>
+      <button class="btn-secundario" id="btnLimparCarrinho">🗑️ Limpar carrinho</button>
+    </section>
 
-  <!-- Modal do Carrinho -->
-  <div class="modal-overlay" id="cartModal">
-    <div class="modal">
-      <h2>Seu Carrinho <button class="close-btn" onclick="closeCart()">✕</button></h2>
-      <div id="cartContent"></div>
-    </div>
-  </div>
+    <!-- FORMULÁRIO DO CLIENTE -->
+    <section class="secao" id="secaoFormulario" style="display:none;">
+      <h2>📋 Seus Dados</h2>
+      <div class="formulario">
+        <label for="inputNome">Nome completo *</label>
+        <input type="text" id="inputNome" placeholder="Ex: João Silva" maxlength="100" />
 
-  <footer>
-    <p>Café Moído © 2026 — Atividade de Qualidade de Software com CI/CD</p>
+        <label for="inputTelefone">Telefone (com DDD) *</label>
+        <input type="tel" id="inputTelefone" placeholder="Ex: 32 99999-0000" maxlength="20" />
+
+        <label for="inputEndereco">Endereço (opcional)</label>
+        <input type="text" id="inputEndereco" placeholder="Ex: Rua das Flores, 123" maxlength="200" />
+
+        <p id="msgErro" class="erro" aria-live="polite"></p>
+
+        <button class="btn-whatsapp" id="btnEnviar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.564 4.14 1.534 5.875L0 24l6.312-1.507A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.014-1.378l-.36-.214-3.742.893.944-3.634-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.431 0 9.818 4.388 9.818 9.818 0 5.431-4.387 9.818-9.818 9.818z"/>
+          </svg>
+          Enviar Pedido pelo WhatsApp
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape-site">
+    <p>☕ Café Especial — Qualidade em cada grão</p>
   </footer>
 
-  <script src="js/products.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/validators.js"></script>
-  <script src="js/app.js"></script>
+  <script src="src/loja.js"></script>
+  <script src="src/app.js"></script>
 </body>
 </html>
