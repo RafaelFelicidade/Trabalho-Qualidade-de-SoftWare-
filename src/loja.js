@@ -71,7 +71,7 @@ function formatarMensagemWhatsApp(cliente, carrinho) {
 }
 
 function gerarLinkWhatsApp(mensagem) {
-  const numero = '5532992192572';
+  const numero = '5532998237029';
   return `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 }
 
