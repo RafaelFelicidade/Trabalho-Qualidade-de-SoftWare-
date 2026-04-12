@@ -3,5 +3,5 @@ function gerarLinkWhatsApp(numero) {
 }
 
 // Usage
-const link = gerarLinkWhatsApp('5532992192572');
+const link = gerarLinkWhatsApp('5532998237029');
 console.log(link);
