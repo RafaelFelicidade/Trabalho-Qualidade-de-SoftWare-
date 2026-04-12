@@ -3,42 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Café Especial — Faça seu Pedido</title>
+  <title>Café Encanto da Serra — Faça seu Pedido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HERO -->
   <header class="hero">
     <div class="hero-content">
-      <span class="emoji-cafe">☕</span>
-      <h1>Café Especial</h1>
-      <p>Escolha sua embalagem e faça seu pedido pelo WhatsApp</p>
+      <div class="logo-wrapper">
+        <img src="" alt="Logo Café Encanto da Serra" class="logo-img" />
+      </div>
+      <div class="hero-text">
+        <span class="hero-sub">CAFÉ</span>
+        <h1>Encanto da Serra</h1>
+        <p>Escolha sua embalagem e faça seu pedido pelo WhatsApp</p>
+      </div>
     </div>
   </header>
 
   <main class="container">
 
-    <!-- PRODUTOS -->
     <section class="secao">
-      <h2>🛍️ Nossos Produtos</h2>
+      <h2>Nossos Produtos</h2>
       <div class="grade-produtos" id="gradeProdutos"></div>
     </section>
 
-    <!-- CARRINHO -->
     <section class="secao" id="secaoCarrinho" style="display:none;">
-      <h2>🛒 Seu Carrinho</h2>
+      <h2>Seu Carrinho</h2>
       <ul id="listaCarrinho"></ul>
       <div class="total-box">
-        <span>Total:</span>
+        <span>Total do Pedido</span>
         <strong id="totalCarrinho">R$ 0,00</strong>
       </div>
       <button class="btn-secundario" id="btnLimparCarrinho">🗑️ Limpar carrinho</button>
     </section>
 
-    <!-- FORMULÁRIO DO CLIENTE -->
     <section class="secao" id="secaoFormulario" style="display:none;">
-      <h2>📋 Seus Dados</h2>
+      <h2>Seus Dados</h2>
       <div class="formulario">
         <label for="inputNome">Nome completo *</label>
         <input type="text" id="inputNome" placeholder="Ex: João Silva" maxlength="100" />
@@ -64,7 +68,11 @@
   </main>
 
   <footer class="rodape-site">
-    <p>☕ Café Especial — Qualidade em cada grão</p>
+    <div class="rodape-content">
+      <p class="rodape-nome">Café Encanto da Serra</p>
+      <p class="rodape-contato">📞 (32) 99823-7029</p>
+      <p class="rodape-copy">Qualidade em cada grão, do campo à sua mesa.</p>
+    </div>
   </footer>
 
   <script src="src/loja.js"></script>
