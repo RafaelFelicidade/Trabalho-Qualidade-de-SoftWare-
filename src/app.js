@@ -53,7 +53,7 @@ function obterQuantidadeTemp(id) {
 }
 
 function incrementar(id) {
-  quantidadesTemp[id] = (quantidadesTemp[id] || 1) + 1;
+  quantidadesTemp[id] = (quantidadesTemp[id] || 0) + 1;
   document.getElementById(`qtd-${id}`).textContent = quantidadesTemp[id];
 }
 
@@ -156,3 +156,4 @@ btnEnviar.addEventListener('click', () => {
 });
 
 renderizarProdutos();
+
