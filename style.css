@@ -1,0 +1,102 @@
+/* ─── Reset ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #fdf6ee;
+  color: #2d1b0e;
+}
+
+/* ─── Hero ─── */
+.hero {
+  background: linear-gradient(135deg, #3b1f0a, #7b3f1e);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+}
+.emoji-cafe { font-size: 3rem; display: block; margin-bottom: 0.5rem; }
+.hero h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: 1px; }
+.hero p { margin-top: 0.5rem; opacity: 0.85; font-size: 1rem; }
+
+/* ─── Container ─── */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ─── Seção ─── */
+.secao h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: #3b1f0a;
+  border-left: 4px solid #c8860a;
+  padding-left: 0.75rem;
+}
+
+/* ─── Grade de Produtos ─── */
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card-produto {
+  background: #fff;
+  border: 2px solid #e8d5b0;
+  border-radius: 12px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.card-produto:hover { box-shadow: 0 4px 16px rgba(59,31,10,0.12); border-color: #c8860a; }
+
+.card-produto .icone { font-size: 2rem; text-align: center; }
+.card-produto h3 { font-size: 0.95rem; color: #3b1f0a; text-align: center; }
+.card-produto .preco {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #c8860a;
+  text-align: center;
+}
+
+.controle-quantidade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.controle-quantidade button {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 2px solid #c8860a;
+  background: transparent;
+  color: #c8860a;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1;
+}
+.controle-quantidade button:hover { background: #c8860a; color: #fff; }
+.controle-quantidade span {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-adicionar {
+  background: #3b1f0a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  tran

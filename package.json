@@ -1,0 +1,15 @@
+{
+  "name": "cafe-pedidos",
+  "version": "1.0.0",
+  "description": "Sistema de pedidos de café com envio por WhatsApp",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": ["src/loja.js"]
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
