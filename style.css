@@ -201,5 +201,5 @@ body {
 
 @media (max-width: 480px) {
   .hero h1 { font-size: 1.6rem; }
-  .grade-produtos { grid-template-columns: 1fr 1fr; }
+  .grade-produtos { grid-template-columns: 1fr; }
 }
