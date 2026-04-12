@@ -1,8 +1,3 @@
-/**
- * loja.js — Lógica de negócio da loja de café
- * Funções puras, sem dependência do DOM (facilitam os testes)
- */
-
 const PRODUTOS = [
   { id: 1, nome: 'Embalagem Verde 1kg em Grão',  preco: 99.90 },
   { id: 2, nome: 'Embalagem Verde 1kg em Pó',    preco: 99.90 },
@@ -71,7 +66,7 @@ function formatarMensagemWhatsApp(cliente, carrinho) {
 }
 
 function gerarLinkWhatsApp(mensagem) {
-  const numero = '5532992192572';
+  const numero = '5532998237029';
   return `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 }
 
