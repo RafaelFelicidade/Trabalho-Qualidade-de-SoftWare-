@@ -1,6 +1,6 @@
 ☕ Café Especial — Sistema de Pedidos
 Sistema web para pedidos de café com envio automático via WhatsApp, desenvolvido como Atividade Avaliativa 1 da disciplina de Qualidade de Software.
-🔗 Acesse a aplicação aqui
+[🔗 Acesse a aplicação aqui](https://rafaelfelicidade.github.io/Trabalho-Qualidade-de-SoftWare-)
 ________________________________________
 📋 Descrição da Aplicação
 Uma loja virtual de café onde o cliente pode:
