@@ -62,13 +62,14 @@ npm test
 ________________________________________
 🧪 Testes Automatizados
 Os testes estão em tests/loja.test.js e cobrem as seguintes funções:
-Função	O que é testado
-getProdutos	Retorna 6 produtos, todos com id, nome e preço válidos
-calcularTotal	Cálculo correto do total, erros para produto inexistente e quantidade inválida
-calcularQuantidadeTotal	Soma correta das quantidades do carrinho
-validarCliente	Validação de nome, telefone, erros para dados inválidos
-formatarMensagemWhatsApp	Mensagem contém nome, produto e total, erros para carrinho vazio
-gerarLinkWhatsApp	Gera link válido com número correto e mensagem codificada
+| Função | O que é testado |
+| :--- | :--- |
+| getProdutos | Retorna 6 produtos, todos com id, nome e preço válidos |
+| calcularTotal | Cálculo correto do total, erros para produto inexistente e quantidade inválida |
+| calcularQuantidadeTotal | Soma correta das quantidades do carrinho |
+| validarCliente | Validação de nome, telefone, erros para dados inválidos |
+| formatarMensagemWhatsApp | Mensagem contém nome, produto e total, erros para carrinho vazio |
+| gerarLinkWhatsApp | Gera link válido com número correto e mensagem codificada |
 Para rodar os testes:
 npm test
 ________________________________________
