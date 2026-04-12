@@ -33,13 +33,14 @@ Trabalho-Qualidade-de-SoftWare-/
 └── README.md
 ________________________________________
 ⚙️ Decisões Técnicas
-Decisão	Motivo
-JavaScript puro (sem frameworks)	Simplicidade e compatibilidade com GitHub Pages sem build step
-Separação entre loja.js e app.js	Permite testar a lógica sem depender do navegador/DOM
-Jest para testes	Framework de testes mais popular para JavaScript, fácil configuração
-GitHub Actions para CI/CD	Integrado ao GitHub, gratuito para repositórios públicos
-peaceiris/actions-gh-pages para deploy	Solução consolidada para publicar no GitHub Pages via Actions
-Gemini Code Assist para revisão	Ferramenta gratuita integrada ao GitHub para análise automática de código
+| Decisão | Motivo |
+| :--- | :--- |
+| JavaScript puro (sem frameworks) | Simplicidade e compatibilidade com GitHub Pages sem build step |
+| Separação entre loja.js e app.js | Permite testar a lógica sem depender do navegador/DOM |
+| Jest para testes | Framework de testes mais popular para JavaScript, fácil configuração |
+| GitHub Actions para CI/CD | Integrado ao GitHub, gratuito para repositórios públicos |
+| peaceiris/actions-gh-pages para deploy | Solução consolidada para publicar no GitHub Pages via Actions |
+| Gemini Code Assist para revisão | Ferramenta gratuita integrada ao GitHub para análise automática de código |
 ________________________________________
 🚀 Como Executar Localmente
 Pré-requisitos
