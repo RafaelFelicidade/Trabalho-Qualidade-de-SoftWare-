@@ -154,7 +154,7 @@ describe('formatarMensagemWhatsApp', () => {
 describe('gerarLinkWhatsApp', () => {
   test('deve gerar um link válido do WhatsApp', () => {
     const link = gerarLinkWhatsApp('Olá, quero fazer um pedido');
-    expect(link).toContain('wa.me/5532992192572');
+    expect(link).toContain('wa.me/5532998237029');
   });
 
   test('deve conter a mensagem codificada no link', () => {
